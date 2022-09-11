@@ -1,0 +1,17 @@
+{
+  "GUILDS": [
+    {
+      "GUILD_NAME": "",
+      "GUILD_ID": "",
+      "COMMAND_FILTER": [],
+      "WELCOME_MSG": false
+    }
+  ],
+  "BANNERS": {
+    "default": {
+      "description": "",
+      "file": "",
+      "role": ""
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "chaos-discord-bot",
+  "version": "1.0.0",
+  "description": "A custom discord bot for the browser game GOTWIC.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js --config nodemon.json"
+  },
+  "keywords": [],
+  "author": "dev.cjcanlas@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.5.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@keyv/mysql": "^1.1.4",
+    "axios": "^0.24.0",
+    "discord.js": "^13.0.1",
+    "keyv": "^4.0.3",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
+  },
+  "nodeVersion": "16.6.1"
+}

@@ -1,5 +1,5 @@
 {
-  "name": "chaos-discord-bot",
+  "name": "hoh-discord-bot",
   "version": "1.0.0",
   "description": "A custom discord bot for the browser game GOTWIC.",
   "main": "src/app.js",

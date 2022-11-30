@@ -171,7 +171,7 @@ const updateCommandOptions = async (command) => {
   const db = new DB();
   switch (command.name) {
     case "bank-request":
-      const option = arrayFindPropertyByName(command.options, "bank");
+      const bankOptions = arrayFindPropertyByName(command.options, "bank");
       const banks = await db.getBankLists();
       const banksOption = banks.map((bank) => {
         const { name } = bank;
@@ -180,10 +180,10 @@ const updateCommandOptions = async (command) => {
           value: name,
         };
       });
-      option.choices = banksOption;
+      bankOptions.choices = banksOption;
       return command;
     case "banners":
-      const options = arrayFindPropertyByName(command.options, "options");
+      const bannerOptions = arrayFindPropertyByName(command.options, "options");
       const { BANNERS } = await getConfigs();
       const banners = Object.entries(BANNERS).map((banner) => {
         const [id, value] = banner;
@@ -192,7 +192,7 @@ const updateCommandOptions = async (command) => {
           value: id,
         };
       });
-      options.choices = banners;
+      bannerOptions.choices = banners;
       return command;
   }
   return command;

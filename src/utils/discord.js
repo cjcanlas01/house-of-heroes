@@ -1,4 +1,4 @@
-const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
+const { EmbedBuilder, MessageActionRow, MessageButton } = require("discord.js");
 const { BOT_NAME } = require("../env-config");
 
 const interactionHandler = async (action, interaction) => {
@@ -21,16 +21,16 @@ const interactionHandler = async (action, interaction) => {
  * @param {object} fields
  * @param {string} title
  * @param {string} footer
- * @returns {MessageEmbed}
+ * @returns {EmbedBuilder}
  */
 const embed = (fields, title = null, footer = null) => {
   title = !title ? `${BOT_NAME} IS HERE! HOW CAN I HELP?` : title;
   footer = !footer ? "Developed by: Q Coldwater#1395" : footer;
-  return new MessageEmbed()
+  return new EmbedBuilder()
     .setTitle(title)
     .setColor(0xff0000)
     .addFields(fields)
-    .setFooter(footer);
+    .setFooter({ text: footer });
 };
 
 /**
